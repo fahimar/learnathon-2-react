@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       {/*<h1>Hello World</h1>}
       {/*<button>click Me</button>*/}
-      <Button />
-      <Button />
+      <Button size="lg" color="red" variant="" />
+      <Button size="sm" color="blue" variant="" />
     </div>
   );
 }
