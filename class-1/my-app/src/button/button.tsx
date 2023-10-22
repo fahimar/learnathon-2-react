@@ -4,7 +4,7 @@ interface BtnPropsType {
   color: string;
   variant: string;
 }
-import React from "react";
+import React, { useState } from "react";
 // const Button = (props: { size: string }) => {
 //   const { size } = props;
 //   console.log(props);
@@ -16,11 +16,16 @@ import React from "react";
 // };
 
 const Button = (props: BtnPropsType) => {
+  const [count, setCount] = useState<number>(1);
   const { size, color, variant } = props;
   console.log(props);
+  const handleClick = () => {
+    setCount(count + 1);
+  };
   return (
-    <button className="style">
+    <button className="style" onClick={handleClick}>
       {size === "lg" ? "Dayeen button" : "Sadik button"}
+      {count}
     </button>
   );
 };
