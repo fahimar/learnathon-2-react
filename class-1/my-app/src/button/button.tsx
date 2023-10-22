@@ -20,7 +20,7 @@ const Button = (props: BtnPropsType) => {
   console.log(props);
   return (
     <button className="style">
-      {size === "lg" ? "large button" : "small button"}
+      {size === "lg" ? "Dayeen button" : "Sadik button"}
     </button>
   );
 };
