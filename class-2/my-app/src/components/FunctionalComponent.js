@@ -1,8 +1,12 @@
 import { useState } from "react";
 
 function FunctionalComponent(props) {
-  const [count, setCount] = useState();
+  const [count, setCount] = useState(5);
   const [value, setValue] = useState("");
+
+  if (props.isLoggedIn) {
+    return <div>All is well!!</div>;
+  }
 
   return (
     <div>
