@@ -4,7 +4,9 @@ import { Component } from "react";
 
 export class BasicClassComponent extends Component {
   render() {
-    return <h1>This is a simple header from Class Component</h1>;
+    return (
+      <h2>This is a simple header from Class Component export to App.js</h2>
+    );
   }
 }
 
