@@ -20,12 +20,12 @@ function App() {
               </p>
 
               {/* <BasicClassComponent></BasicClassComponent> */}
-              {/* <FunctionalComponent
+              <FunctionalComponent
                 name={"Fahim Al Rashid"}
                 email={"fahimar14040@gmail.com"}
                 isLoggedIn={false}
-              ></FunctionalComponent> */}
-              <ListAndKeys></ListAndKeys>
+              ></FunctionalComponent>
+              {/* <ListAndKeys></ListAndKeys> */}
             </header>
           </div>
         </div>
