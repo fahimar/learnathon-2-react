@@ -6,11 +6,19 @@ const FormHandling = () => {
     password: "",
   });
   const handleEmailChange = (event) => {
-    console.log(event);
+    // console.log(event.target.value);
+    setUserInfo({
+      ...userInfo,
+      email: event.target.value,
+    });
   };
 
   const handlePasswordChange = (event) => {
-    console.log(event);
+    // console.log(event.target.value);
+    setUserInfo({
+      ...userInfo, // destructuring
+      password: event.target.value,
+    });
   };
   //   //   const handleFormSubmit = () => {
   //   //     alert("Form Submitted");
@@ -22,6 +30,7 @@ const FormHandling = () => {
     //alert("Form Submitted");
     event.preventDefault();
     console.log("Form Submitted");
+    console.log("User Info:", userInfo);
   };
 
   return (
