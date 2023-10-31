@@ -3,6 +3,7 @@ import "./App.css";
 //import { BasicClassComponent } from "./components/BasicClassComponent";
 
 import { BasicClassComponent } from "./components/BasicClassComponent";
+import FormHandling from "./components/FormHandling";
 import FunctionalComponent from "./components/FunctionalComponent";
 import ListAndKeys from "./components/ListAndKeys";
 
@@ -20,12 +21,13 @@ function App() {
               </p>
 
               {/* <BasicClassComponent></BasicClassComponent> */}
-              <FunctionalComponent
+              {/* <FunctionalComponent
                 name={"Fahim Al Rashid"}
                 email={"fahimar14040@gmail.com"}
                 isLoggedIn={false}
-              ></FunctionalComponent>
+              ></FunctionalComponent> */}
               {/* <ListAndKeys></ListAndKeys> */}
+              <FormHandling></FormHandling>
             </header>
           </div>
         </div>
