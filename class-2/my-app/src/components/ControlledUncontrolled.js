@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 
-const FormHandling = () => {
+const ControlledUncontrolled = () => {
+  const [email, setEmail] = useState("");
+
   const [userInfo, setUserInfo] = useState({
     email: "",
     password: "",
   });
+
   const handleEmailChange = (event) => {
     // console.log(event.target.value);
     setUserInfo({
@@ -40,15 +43,21 @@ const FormHandling = () => {
       {/*  writing throudh callback or without callback {handleFormSubmit} */}
       <p>
         Email :
-        <input type="text" onChange={(e) => handleEmailChange(e)} />
+        <input
+          type="text"
+          value={email}
+          onChange={(e) => handleEmailChange(e)}
+        />
+        {/* {conytrolled by react} */}
       </p>
       <p>
         Password :
         <input type="text" onChange={(e) => handlePasswordChange(e)} />
+        {/* {conytrolled by DOM} */}
       </p>
       <button type="submit">Login</button>
     </form>
   );
 };
 
-export default FormHandling;
+export default ControlledUncontrolled;

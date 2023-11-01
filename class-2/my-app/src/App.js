@@ -3,6 +3,7 @@ import "./App.css";
 //import { BasicClassComponent } from "./components/BasicClassComponent";
 
 import { BasicClassComponent } from "./components/BasicClassComponent";
+import ControlledUncontrolled from "./components/ControlledUncontrolled";
 import FormHandling from "./components/FormHandling";
 import FunctionalComponent from "./components/FunctionalComponent";
 import ListAndKeys from "./components/ListAndKeys";
@@ -27,7 +28,8 @@ function App() {
                 isLoggedIn={false}
               ></FunctionalComponent> */}
               {/* <ListAndKeys></ListAndKeys> */}
-              <FormHandling></FormHandling>
+              {/* <FormHandling></FormHandling> */}
+              <ControlledUncontrolled></ControlledUncontrolled>
             </header>
           </div>
         </div>
