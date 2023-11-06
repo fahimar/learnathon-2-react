@@ -7,8 +7,8 @@ const Counter = () => {
     <div className={styles.counter}>
       Counter
       <p>This is Counter</p>
-      <button className="button-primary">Button 1</button>
-      <button className="button-secondary">Button 2</button>
+      <button className="button-primary item-1">Button 1</button>
+      <button className="button-secondary item-2">Button 2</button>
     </div>
   );
 };
