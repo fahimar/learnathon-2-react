@@ -1,0 +1,32 @@
+nav {
+  ul {
+    background-color: green;
+    color: red;
+  }
+}
+
+%button {
+  padding: 10px;
+  margin: 4px;
+  width: 100px;
+  border-radius: 5px;
+}
+@mixin button-styles($color, $bg) {
+  // dynamic field
+  @extend %button;
+  color: $color;
+  background-color: $bg;
+}
+/*
+.button-primary {
+  @extend %button;
+  color: white;
+  background-color: blue;
+}
+*/
+.button-primary {
+  @include button-styles(white, blue);
+}
+.button-secondary {
+  @include button-styles(red, yellow);
+}
