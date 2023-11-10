@@ -24,8 +24,8 @@ const Counter = () => {
   // `;
   const reducer = (state, action) => {
     // update states
-    if (action === "increment") return state + 1;
-    else if (action === "decrement") return state - 1;
+    if (action.type === "increment") return state + action.payload;
+    else if (action.type === "decrement") return state - 1;
     return state;
   };
   const [count, setCount] = useState(0);
@@ -51,6 +51,21 @@ const Counter = () => {
     //   console.log("I am out useEffect");
     // };
   }, [count, value]);
+
+  const WithFunctionality = (props) => {
+    const [value, setValue] = useState(0);
+    const handleValue = () => setValue((prev) => prev + 1);
+    return props.render(value, handleValue);
+  };
+  //  export default WithFunctionality;
+  const costlyFun = (num) => {
+    let sum = num;
+    for (let i = 0; i < 1000000000; i++) {
+      sum = num;
+    }
+    return sum;
+  };
+  console.log(costlyFun(5));
   return (
     <div className={styles.counter}>
       Counter
@@ -60,7 +75,8 @@ const Counter = () => {
       <Button onClick={handleCount}>Button 1</Button>
       <button
         className="button-secondary item-2"
-        onClick={() => dispatch("decrement")} // or increment
+        onClick={() => dispatch({ type: "increment", payload: 5 })} // increment or decrement
+        // action is occuring in dispatch
       >
         Button 2
       </button>
@@ -69,3 +85,13 @@ const Counter = () => {
 };
 
 export default Counter;
+
+// Higher order function
+// like Render props
+const sum = (a, b, fn) => {
+  let result = a + b;
+  return fn(result);
+};
+sum(1, 2, (result) => {
+  console.log({ result }); //props
+});

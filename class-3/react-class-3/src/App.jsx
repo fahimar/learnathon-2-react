@@ -6,7 +6,8 @@ import Counter from "./component/Counter";
 import Homepage from "./pages/Homepage";
 import User from "./pages/User";
 import Users from "./pages/Users";
-
+import CounterContextProvider from "./context/counterContext";
+// import WithFunctionality from "./component/Counter";
 const routes = createBrowserRouter([
   { path: "/", element: <Homepage /> },
   { path: "/counter", element: <Counter /> },
@@ -24,7 +25,20 @@ function App() {
     // return ();
     /*<Counter />*/
   }
-  return <RouterProvider router={routes} />;
+  return (
+    <CounterContextProvider>
+      <RouterProvider router={routes} />
+    </CounterContextProvider>
+  );
 }
+
+// const MyApp=()=>{
+//   return(
+//     <WithFunctionality render=((value,handleValue)=>
+//     <CounterComponent count = {value} handleCount={handleValue}/>
+//     />
+//     )
+//   );
+// }
 
 export default App;
