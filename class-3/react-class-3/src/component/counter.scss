@@ -1,0 +1,45 @@
+@use "sass:math";
+nav {
+  ul {
+    background-color: green;
+    color: red;
+  }
+}
+
+%button {
+  padding: 10px;
+  margin: 4px;
+  width: 100px;
+  border-radius: 5px;
+}
+@mixin button-styles($color, $bg) {
+  // dynamic field
+  @extend %button;
+  color: $color;
+  background-color: $bg;
+}
+/*
+.button-primary {
+  @extend %button;
+  color: white;
+  background-color: blue;
+}
+*/
+@function get-width($num) {
+  @return $num * 100px; // * math.random($limit: 2);
+}
+
+@for $i from 1 through 5 {
+  .item-#{$i} {
+    // width: 100px + ($i * 5);
+    height: 100px * $i;
+  }
+}
+
+.button-primary {
+  @include button-styles(white, blue);
+  width: math.div(400px, 900px) * 100%; // calc(divWidth/screenWidth)*100%  --------get-width(3);
+}
+.button-secondary {
+  @include button-styles(red, yellow);
+}
