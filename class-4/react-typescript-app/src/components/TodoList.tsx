@@ -18,7 +18,7 @@ const TodoList = (props: TodoListProps) => {
       <ul>
         {(props?.todoList ?? []).map((todo) => (
           <li key={todo.id}>
-            <TodoItem {...todo} user={props?.user} />
+            <TodoItem {...todo} />
           </li>
         ))}
       </ul>

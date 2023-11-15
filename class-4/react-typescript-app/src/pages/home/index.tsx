@@ -1,9 +1,11 @@
 import React from "react";
-import { useEffect, useRef, useState } from "react";
+import { createContext, useEffect, useRef, useState } from "react";
 import TodoList from "../../components/TodoList";
 import { Axios } from "../../Axios";
 
 //https://jsonplaceholder.typicode.com/users/2
+
+export const UserContext = createContext<string | null>(null);
 
 const Dashboard = () => {
   const [value, setValue] = useState([]);
@@ -28,9 +30,11 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="list-container">
-      <TodoList todoList={todoList} user={userData} />
-    </div>
+    <UserContext.Provider value={"user info"}>
+      <div className="list-container">
+        <TodoList todoList={todoList} />
+      </div>
+    </UserContext.Provider>
   );
 };
 

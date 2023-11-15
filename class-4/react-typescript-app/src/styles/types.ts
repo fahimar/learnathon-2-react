@@ -4,10 +4,10 @@ export interface TodoItemType {
   title: string;
   completed: boolean;
   callback?: () => void;
-  user: string;
+  // user: string;
 }
 
 export interface TodoListProps {
   todoList?: TodoItemType[];
-  user: string;
+  // user: string;
 }
