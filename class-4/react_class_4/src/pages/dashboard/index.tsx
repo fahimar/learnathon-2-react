@@ -23,7 +23,7 @@ const Dashboard = () => {
     const responseData = await Axios.get(
       "https://jsonplaceholder.typicode.com/todos"
     ).then((res) => res?.data?.data);
-
+    // console.log(responseData);
     return responseData;
   };
 

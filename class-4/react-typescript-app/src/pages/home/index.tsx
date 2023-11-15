@@ -9,7 +9,7 @@ const Dashboard = () => {
   const [value, setValue] = useState([]);
   const [todoList, setTodoList] = useState([]);
   const isDataFetched = useRef<boolean>(false);
-
+  const [userData, setUserData] = useState("User info");
   useEffect(() => {
     if (isDataFetched.current) return;
 
@@ -29,7 +29,7 @@ const Dashboard = () => {
 
   return (
     <div className="list-container">
-      <TodoList todoList={todoList} />
+      <TodoList todoList={todoList} user={userData} />
     </div>
   );
 };

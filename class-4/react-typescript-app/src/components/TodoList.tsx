@@ -15,16 +15,28 @@ const TodoList = (props: TodoListProps) => {
 
   return (
     <>
-      <button onClick={handleCounter}>{`Count ${counter}`}</button>
       <ul>
         {(props?.todoList ?? []).map((todo) => (
-          <li key={todo?.id}>
-            <TodoItem {...todo} callback={handleSOmethign} />
+          <li key={todo.id}>
+            <TodoItem {...todo} user={props?.user} />
           </li>
         ))}
       </ul>
     </>
   );
+
+  // return (
+  //   <>
+  //     <button onClick={handleCounter}>{`Count ${counter}`}</button>
+  //     <ul>
+  //       {(props?.todoList ?? []).map((todo) => (
+  //         <li key={todo?.id}>
+  //           <TodoItem {...todo} callback={handleSOmethign} />
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   </>
+  // );
 };
 
 export default TodoList;
