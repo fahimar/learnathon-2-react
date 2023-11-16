@@ -1,10 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Dashboard from "./pages/dashboard/index";
+
+import { Dashboard } from ".pages/home/index";
 import { Suspense, lazy } from "react";
 
 const BasicLayout = lazy(() => import("./layouts/BasicLayout"));
 const BlogLayout = lazy(() => import("./layouts/BlogLayout"));
-
+//yarn add @types/react-router-dom --dev
+// Press Ctrl+Shift+P -> Reload
 export const App = () => {
   return (
     <div style={{ height: "100%" }}>

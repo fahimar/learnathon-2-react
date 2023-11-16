@@ -2,7 +2,7 @@ import React from "react";
 import { createContext, useEffect, useRef, useState } from "react";
 import TodoList from "../../components/TodoList";
 import { Axios } from "../../Axios";
-
+import { Router, Route } from "react-router-dom";
 //https://jsonplaceholder.typicode.com/users/2
 
 export const UserContext = createContext<string | null>(null);
@@ -36,6 +36,17 @@ const Dashboard = () => {
       </div>
     </UserContext.Provider>
   );
+  // return (
+  //   <UserContext.Provider value={"user info"}>
+  //     {/* Wrap your component with BrowserRouter */}
+  //     <Router>
+  //       <div className="list-container">
+  //         {/* Use Route component to define your routes */}
+  //         <Route path="/todos" component={TodoList} />
+  //       </div>
+  //     </Router>
+  //   </UserContext.Provider>
+  // );
 };
 
 export default Dashboard;

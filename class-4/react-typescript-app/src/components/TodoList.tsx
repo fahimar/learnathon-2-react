@@ -13,30 +13,30 @@ const TodoList = (props: TodoListProps) => {
     console.log("From todo item");
   }, []);
 
-  return (
-    <>
-      <ul>
-        {(props?.todoList ?? []).map((todo) => (
-          <li key={todo.id}>
-            <TodoItem {...todo} />
-          </li>
-        ))}
-      </ul>
-    </>
-  );
-
   // return (
   //   <>
-  //     <button onClick={handleCounter}>{`Count ${counter}`}</button>
   //     <ul>
   //       {(props?.todoList ?? []).map((todo) => (
-  //         <li key={todo?.id}>
-  //           <TodoItem {...todo} callback={handleSOmethign} />
+  //         <li key={todo.id}>
+  //           <TodoItem {...todo} />
   //         </li>
   //       ))}
   //     </ul>
   //   </>
   // );
+
+  return (
+    <>
+      <button onClick={handleCounter}>{`Count ${counter}`}</button>
+      <ul>
+        {(props?.todoList ?? []).map((todo) => (
+          <li key={todo?.id}>
+            <TodoItem {...todo} callback={handleSOmethign} />
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 };
 
 export default TodoList;
