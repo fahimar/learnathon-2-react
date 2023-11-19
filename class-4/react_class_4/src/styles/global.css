@@ -1,0 +1,36 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.user-item {
+  display: flex;
+  gap: 12px;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #242424;
+  max-width: 750px;
+}
+
+.list-container {
+  background-color: #fff;
+  padding: 30px;
+}
+
+.user-item span {
+  text-decoration: underline;
+}
+
+ul li {
+  list-style-type: decimal;
+  margin: 8px 0px;
+}
+
+#root {
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
